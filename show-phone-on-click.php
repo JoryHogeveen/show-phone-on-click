@@ -34,5 +34,26 @@ class Keraweb_Show_Phone_On_Click
 	 * Keraweb_Show_Phone_On_Click constructor.
 	 */
 	protected function __construct() {
+		add_shortcode( 'show-phone-on-click', array( $this, 'shortcode' ) );
+	}
+
+	/**
+	 * Shortcode callback.
+	 *
+	 * @param array $atts
+	 * @return string
+	 */
+	public function shortcode( $atts ) {
+
+		$pairs = array(
+			'id'        => '',
+			'link'      => '',
+			'text'      => '',
+			'textclick' => '',
+		);
+
+		$atts = shortcode_atts( $pairs, $atts );
+
+		return '<a class="show-phone-on-click" id="' . $atts['id'] . '" href="' . $atts['link'] . '" data-textclick="' . $atts['textclick'] . '">' . $atts['text'] . '</a>';
 	}
 }
