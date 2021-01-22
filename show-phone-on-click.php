@@ -46,10 +46,10 @@ class Keraweb_Show_Phone_On_Click
 	public static function shortcode( $atts ) {
 
 		$pairs = array(
-			'id'        => '',
-			'link'      => '',
-			'text'      => '',
-			'textclick' => '',
+			'id'      => '',
+			'link'    => '',
+			'text'    => '',
+			'onclick' => '',
 		);
 
 		$atts = shortcode_atts( $pairs, $atts );
@@ -57,7 +57,7 @@ class Keraweb_Show_Phone_On_Click
 		// Escape values.
 		$atts = array_map( 'esc_attr', $atts );
 
-		$func = 'document.getElementById( \'' . $atts['id'] . '\' ).innerHTML = \'' . $atts['textclick'] . '\'';
+		$func = 'document.getElementById( \'' . $atts['id'] . '\' ).innerHTML = \'' . $atts['onclick'] . '\'';
 
 		return '<a class="show-phone-on-click" id="' . $atts['id'] . '" href="' . $atts['link'] . '" onclick="' . $func .  '">' . $atts['text'] . '</a>';
 	}
