@@ -35,7 +35,6 @@ class Keraweb_Show_Phone_On_Click
 	 */
 	protected function __construct() {
 		add_shortcode( 'show-phone-on-click', array( $this, 'shortcode' ) );
-		add_action( 'wp_footer', __CLASS__ . '::script' );
 	}
 
 	/**
@@ -58,15 +57,8 @@ class Keraweb_Show_Phone_On_Click
 		// Escape values.
 		$atts = array_map( 'esc_attr', $atts );
 
-		return '<a class="show-phone-on-click" id="' . $atts['id'] . '" href="' . $atts['link'] . '" onclick="showPhoneOnClick( \'' . $atts['id'] . '\', \'' . $atts['textclick'] . '\' )">' . $atts['text'] . '</a>';
-	}
+		$func = 'document.getElementById( \'' . $atts['id'] . '\' ).innerHTML = \'' . $atts['textclick'] . '\'';
 
-	/**
-	 * Render inline script.
-	 */
-	public static function script() {
-		echo '<script id="show-phone-on-click">';
-		include 'js/inline-script.js';
-		echo '</script>';
+		return '<a class="show-phone-on-click" id="' . $atts['id'] . '" href="' . $atts['link'] . '" onclick="' . $func .  '">' . $atts['text'] . '</a>';
 	}
 }
