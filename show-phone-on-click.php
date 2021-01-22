@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Show Phone on Click
- * Description:       WordPress Plugin that adds a shortcode to only show actual phone number by clicking on the text link. Perfect for tracking leads on phone calls. Usage example: [show-phone-on-click id="customer-phone-lead" link="0031134454543" text="Call Us Now" onclick="013 445 4543"]
+ * Description:       WordPress Plugin that adds a shortcode to only show actual phone number by clicking on the text link. Perfect for tracking leads on phone calls. Usage example: [show-phone-on-click id="customer-phone-lead" link="tel:0031131234567" text="Call Us Now" onclick="013 123 4567"]
  * Version:           1.0
  * Author:            Jory Hogeveen
  * Author URI:        https://www.keraweb.nl
