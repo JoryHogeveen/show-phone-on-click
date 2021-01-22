@@ -1,10 +1,14 @@
 <?php
 /**
- * Plugin Name: Show Phone on Click
- * Description: WordPress Plugin that adds a shortcode to only show phone number by clicking on the text link
- * Version:     1.0
- * Author:      Jory Hogeveen
- * Author URI:  https://www.keraweb.nl
+ * Plugin Name:       Show Phone on Click
+ * Description:       WordPress Plugin that adds a shortcode to only show phone number by clicking on the text link
+ * Version:           1.0
+ * Author:            Jory Hogeveen
+ * Author URI:        https://www.keraweb.nl
+ * Text Domain:       show-phone-on-click
+ * GitHub Plugin URI: JoryHogeveen/show-phone-on-click
+ * License:           GNU General Public License v3.0
+ * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
  */
 
 if ( ! defined ( 'ABSPATH' ) ) {
